@@ -1,5 +1,5 @@
-Copyright (c) 2026- 2027 binary01100010
+Copyright (c) 2026 - 2027 binary01100010
 
-Alle Rechte vorbehalten. (All rights reserved.)
+All rights reserved.
 
-Ohne vorherige schriftliche Genehmigung des Urhebers darf dieses Projekt oder Teile davon in keiner Form reproduziert, vervielfältigt, verbreitet, verändert oder für eigene Projekte (kommerziell oder nicht-kommerziell) verwendet werden.
+Without the prior written permission of the copyright holder, no part of this project may be reproduced, duplicated, distributed, modified, or used for other projects (commercial or non-commercial) in any form.
