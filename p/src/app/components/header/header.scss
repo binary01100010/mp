@@ -1,5 +1,59 @@
 @use '../../styles/index' as *;
 
-p {
-  color: $black;
+nav {
+  background-color: $darkBlue;
+  @include dFjSaC;
+  padding: 37px 100px;
+  border: 2px solid red;
+  max-width: 1440px;
+  width: 100%;
+  .headerLeft {
+    display: flex;
+    img {
+      width: 30px;
+      height: auto;
+      border-radius: 3px;
+    }
+  }
+  .headerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 92px;
+    height: 35px;
+    .headerRightA {
+      display: flex;
+      gap: 29px;
+      a {
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+    .headerRightLanguage {
+      display: flex;
+      gap: 14px;
+
+      .btnDE {
+        background-color: $darkBlue;
+        border: 1px solid $lightGreen;
+        border-radius: 10px;
+        padding: 5px 8px;
+        color: $white;
+        &.active {
+          background-color: $lightGreen;
+        }
+      }
+      .btnEN {
+        background-color: $darkBlue;
+        border: 1px solid $lightGreen;
+        border-radius: 10px;
+        padding: 5px 8px;
+        color: $white;
+        &.active {
+          background-color: $lightGreen;
+        }
+      }
+    }
+  }
 }

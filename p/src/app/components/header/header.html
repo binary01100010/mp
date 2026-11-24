@@ -1,1 +1,28 @@
-<p>header works!</p>
+<nav class="header">
+  <div class="headerLeft">
+    <img src="logo/logo.svg" alt="logo of website" />
+  </div>
+  <div class="headerRight">
+    <div class="headerRightA">
+      <a href="#AboutMe">About me</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Portfolio">Portfolio</a>
+    </div>
+    <div class="headerRightLanguage">
+      <button
+        class="btnDE"
+        (click)="language.changeLanguage('de')"
+        [class.active]="language.languageDE()"
+      >
+        DE
+      </button>
+      <button
+        class="btnEN"
+        (click)="language.changeLanguage('en')"
+        [class.active]="language.languageEN()"
+      >
+        EN
+      </button>
+    </div>
+  </div>
+</nav>

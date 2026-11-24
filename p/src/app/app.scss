@@ -1,0 +1,16 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  app-header {
+    border: green 2px solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  app-footer {
+  }
+}
