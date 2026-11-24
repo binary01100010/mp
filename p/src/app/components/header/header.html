@@ -4,9 +4,9 @@
   </div>
   <div class="headerRight">
     <div class="headerRightA">
-      <a href="#AboutMe">About me</a>
-      <a href="#Skills">Skills</a>
-      <a href="#Portfolio">Portfolio</a>
+      <a href="#AboutMe">{{ 'ABOUT_ME' | translate }}</a>
+      <a href="#Skills">{{ 'SKILLS' | translate }}</a>
+      <a href="#Portfolio">{{ 'PORTFOLIO' | translate }}</a>
     </div>
     <div class="headerRightLanguage">
       <button
@@ -14,14 +14,14 @@
         (click)="language.changeLanguage('de')"
         [class.active]="language.languageDE()"
       >
-        DE
+        {{ 'DE' | translate }}
       </button>
       <button
         class="btnEN"
         (click)="language.changeLanguage('en')"
         [class.active]="language.languageEN()"
       >
-        EN
+        {{ 'EN' | translate }}
       </button>
     </div>
   </div>
