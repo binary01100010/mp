@@ -1,14 +1,12 @@
+@use './styles/index' as *;
+
 .body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include dFfCjS;
   height: 100vh;
 
   app-header {
-    border: green 2px solid;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include dFjC;
   }
 
   app-footer {

@@ -1,3 +1,5 @@
+@use './app/styles/index' as *;
+
 * {
   padding: 0px;
   margin: 0px;
@@ -6,11 +8,8 @@
 }
 
 body {
+  font-family: 'Inter';
   app-root {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    border: 1px solid red;
+    @include dFjCfC;
   }
 }

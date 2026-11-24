@@ -3,3 +3,26 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin dFjCfC {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin dFfCjS {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin dFjC {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin dFjCaC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
