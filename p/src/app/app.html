@@ -1,5 +1,8 @@
 <div class="body">
-  <app-header />
+  <app-header #header />
+  @if (header.hamburgerMenu()) {
+    <app-hm-active />
+  }
   <app-footer />
 </div>
 <router-outlet />

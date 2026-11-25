@@ -16,11 +16,11 @@ export class Header {
   hamburgerMenu = signal(false);
 
   hamburgerMenuActive(change: boolean): void {
-    if (this.hamburgerMenu() === false) {
+    if (change === false) {
       this.hamburgerMenu.set(true);
     }
 
-    if (this.hamburgerMenu() === true) {
+    if (change === true) {
       this.hamburgerMenu.set(false);
     }
   }
