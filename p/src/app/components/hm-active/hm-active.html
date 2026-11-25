@@ -1,1 +1,20 @@
-<p>hm-active works!</p>
+<div>
+  <a href="#AboutMe">{{ 'ABOUT_ME' | translate }}</a>
+  <a href="#Skills">{{ 'SKILLS' | translate }}</a>
+  <a href="#Portfolio">{{ 'PORTFOLIO' | translate }}</a>
+  <a href="#Contact">{{ 'CONTACT' | translate }}</a>
+  <button
+    class="btnDE"
+    (click)="language.changeLanguage('de')"
+    [class.active]="language.languageDE()"
+  >
+    {{ 'DE' | translate }}
+  </button>
+  <button
+    class="btnEN"
+    (click)="language.changeLanguage('en')"
+    [class.active]="language.languageEN()"
+  >
+    {{ 'EN' | translate }}
+  </button>
+</div>

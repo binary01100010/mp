@@ -19,17 +19,15 @@ export class Window {
   }
 
   currentWidthInner(): void {
-    setInterval(() => {
-      this.widthInner = window.innerWidth;
+    this.widthInner = window.innerWidth;
 
-      if (this.widthInner < 695) {
-        this.widthInnerActive.set(true);
-      }
+    if (this.widthInner < 695) {
+      this.widthInnerActive.set(true);
+    }
 
-      if (this.widthInner > 695) {
-        this.widthInnerActive.set(false);
-        this.hm.hamburgerMenu.set(false);
-      }
-    }, 1);
+    if (this.widthInner > 695) {
+      this.widthInnerActive.set(false);
+      this.hm.hamburgerMenu.set(false);
+    }
   }
 }
