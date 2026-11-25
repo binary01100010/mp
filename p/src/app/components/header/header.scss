@@ -53,4 +53,23 @@ nav {
       }
     }
   }
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .hm {
+      width: 30px;
+      height: 3px;
+      background-color: $white;
+    }
+  }
+}
+
+@media (max-width: 695px) {
+  nav {
+    padding: 37px 25px;
+    .headerRight {
+      display: none;
+    }
+  }
 }

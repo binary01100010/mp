@@ -27,5 +27,6 @@ export class Languages {
     }
 
     console.log(chooseLanguage);
+    return;
   }
 }
