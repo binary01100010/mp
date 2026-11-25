@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { Languages } from '../../services/languages/languages';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Window } from '../../services/window/window';
+import { Hm } from '../../services/hm/hm';
 
 @Component({
   selector: 'app-header',
@@ -12,16 +13,5 @@ import { Window } from '../../services/window/window';
 export class Header {
   language = inject(Languages);
   window = inject(Window);
-
-  hamburgerMenu = signal(false);
-
-  hamburgerMenuActive(change: boolean): void {
-    if (change === false) {
-      this.hamburgerMenu.set(true);
-    }
-
-    if (change === true) {
-      this.hamburgerMenu.set(false);
-    }
-  }
+  hm = inject(Hm);
 }

@@ -1,4 +1,5 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
+import { Hm } from '../hm/hm';
 
 export interface windowData {
   widthInner: number;
@@ -8,6 +9,8 @@ export interface windowData {
   providedIn: 'root',
 })
 export class Window {
+  hm = inject(Hm);
+
   widthInner: number = 0;
   widthInnerActive = signal(false);
 
@@ -25,6 +28,7 @@ export class Window {
 
       if (this.widthInner > 695) {
         this.widthInnerActive.set(false);
+        this.hm.hamburgerMenu.set(false);
       }
     }, 1);
   }
