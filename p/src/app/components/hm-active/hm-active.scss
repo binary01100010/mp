@@ -9,4 +9,28 @@
     text-decoration: none;
     font-size: 20px;
   }
+  .hmBodybtns {
+    display: flex;
+    gap: 10px;
+    .btnDE {
+      background-color: $darkBlue;
+      border: 1px solid $lightGreen;
+      border-radius: 10px;
+      padding: 5px 8px;
+      color: $white;
+      &.active {
+        background-color: $lightGreen;
+      }
+    }
+    .btnEN {
+      background-color: $darkBlue;
+      border: 1px solid $lightGreen;
+      border-radius: 10px;
+      padding: 5px 8px;
+      color: $white;
+      &.active {
+        background-color: $lightGreen;
+      }
+    }
+  }
 }

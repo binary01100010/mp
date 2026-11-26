@@ -28,15 +28,19 @@ export class Hm {
   }
 
   currentWidthInner(): void {
-    this.widthInner = window.innerWidth;
+    setInterval(() => {
+      this.widthInner = window.innerWidth;
+      console.log(this.widthInner);
 
-    if (this.widthInner < 695) {
-      this.widthInnerActive.set(true);
-    }
+      if (this.widthInner < 795) {
+        this.widthInnerActive.set(true);
+      }
 
-    if (this.widthInner > 695) {
-      this.widthInnerActive.set(false);
-      this.hamburgerMenu.set(false);
-    }
+      if (this.widthInner > 795) {
+        this.widthInnerActive.set(false);
+        this.hamburgerMenu.set(false);
+        this.crossIcon.set(false);
+      }
+    }, 0.0001);
   }
 }
