@@ -17,16 +17,10 @@ export class Languages {
   }
 
   getLanguage() {
-    let lsMemoryLanguage: string | null = '';
-    if (localStorage.getItem(this.memoryLanguage) === null || undefined) {
-      return;
-    } else if (this.memoryLanguage) {
-      lsMemoryLanguage = localStorage.getItem(this.memoryLanguage);
-      if (lsMemoryLanguage === 'en') {
-        this.changeLanguage('en');
-      } else if (lsMemoryLanguage === 'de') {
-        this.changeLanguage('de');
-      }
+    const lsMemoryLanguage = localStorage.getItem(this.memoryLanguage);
+
+    if (lsMemoryLanguage === 'de' || lsMemoryLanguage === 'en') {
+      this.changeLanguage(lsMemoryLanguage);
     }
   }
 
