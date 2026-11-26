@@ -12,8 +12,8 @@
 
 @mixin dFfCjS {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 @mixin dFjC {
@@ -25,4 +25,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin dFjCaCfC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

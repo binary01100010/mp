@@ -1,0 +1,12 @@
+@use '../../styles/index' as *;
+
+.hmBody {
+  @include dFjCaCfC;
+  gap: 80px;
+  height: 100%;
+  a {
+    color: $white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}

@@ -25,11 +25,16 @@
       </button>
     </div>
   </div>
-  @if (window.widthInnerActive()) {
+  @if (hm.widthInnerActive()) {
     <div class="hamburgerMenu" (click)="hm.hamburgerMenuActive(hm.hamburgerMenu())">
       <div class="hm"></div>
       <div class="hm"></div>
       <div class="hm"></div>
+    </div>
+  } @else if (hm.crossIcon()) {
+    <div class="crossIcon" (click)="hm.hamburgerMenuActive(hm.hamburgerMenu())">
+      <div class="crossOne"></div>
+      <div class="crossTwo"></div>
     </div>
   }
 </nav>

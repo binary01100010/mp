@@ -63,6 +63,44 @@ nav {
       background-color: $white;
     }
   }
+
+  .crossIcon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      .crossOne {
+        width: 5px;
+        height: 20px;
+        border-radius: 10px;
+      }
+      .crossTwo {
+        width: 5px;
+        height: 20px;
+        border-radius: 10px;
+      }
+    }
+
+    .crossOne {
+      width: 2px;
+      height: 20px;
+      background-color: rgb(255, 255, 255);
+      transform: rotate(-45deg);
+      position: absolute;
+    }
+
+    .crossTwo {
+      width: 2px;
+      height: 20px;
+      background-color: rgb(255, 255, 255);
+      transform: rotate(45deg);
+      position: absolute;
+    }
+  }
 }
 
 @media (max-width: 695px) {
