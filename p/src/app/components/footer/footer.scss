@@ -4,12 +4,12 @@ footer {
   background-color: $darkBlue;
   border-top: $lightGreen 4px solid;
   width: 100%;
-  padding: 75px 25px;
   @include dFjCaC;
   .footerContent {
     @include dFjSaC;
     max-width: $mW;
     width: 100%;
+    padding: 75px 100px;
     .footerContentLeft {
       @include dFjCaSfC;
       width: 100%;
@@ -35,9 +35,17 @@ footer {
   }
 }
 
+@media (max-width: 795px) {
+  footer {
+    .footerContent {
+      padding: 37px 25px;
+    }
+  }
+}
+
 @media (max-width: 390px) {
   footer {
-    padding: 50px;
+    padding: 10px;
     .footerContent {
       @include dFjCaCfC;
 
