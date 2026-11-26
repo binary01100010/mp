@@ -3,6 +3,8 @@
   @if (hm.hamburgerMenu()) {
     <app-hm-active />
   }
-  <app-footer />
+  @if (!hm.hamburgerMenu()) {
+    <app-footer />
+  }
 </div>
 <router-outlet />

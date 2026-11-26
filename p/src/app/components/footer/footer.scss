@@ -1,3 +1,36 @@
-p {
-  border: green 1px solid;
+@use '../../styles/index' as *;
+
+footer {
+  background-color: $darkBlue;
+  border-top: $lightGreen 4px solid;
+  width: 100%;
+  padding: 75px 25px;
+  @include dFjCaC;
+  .footerContent {
+    @include dFjSaC;
+    max-width: $mW;
+    width: 100%;
+    .footerContentLeft {
+      @include dFjCaSfC;
+      width: 100%;
+      gap: 15px;
+      img {
+        width: 30px;
+        height: auto;
+        border-radius: 3px;
+      }
+      p {
+        color: $white;
+      }
+    }
+    .footerContentMiddle {
+      color: $white;
+      width: 100%;
+      @include dFjCaC;
+    }
+    .footerContentRight {
+      width: 100%;
+      @include dFjEaC;
+    }
+  }
 }
