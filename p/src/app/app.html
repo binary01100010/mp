@@ -1,9 +1,13 @@
 <div class="body">
-  <app-header />
-  <app-main-presentation />
-  @if (hm.hamburgerMenu()) {
-    <app-hm-active />
-  }
+  <div class="mainContent">
+    <app-header />
+    @if (hm.hamburgerMenu()) {
+      <app-hm-active />
+    }
+    @if (!hm.hamburgerMenu()) {
+      <app-main-presentation />
+    }
+  </div>
   @if (!hm.hamburgerMenu()) {
     <app-footer />
   }
