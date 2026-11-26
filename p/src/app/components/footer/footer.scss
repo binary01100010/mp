@@ -9,7 +9,7 @@ footer {
     @include dFjSaC;
     max-width: $mW;
     width: 100%;
-    padding: 75px 100px;
+    padding: 75px $pOm;
     .footerContentLeft {
       @include dFjCaSfC;
       width: 100%;
@@ -38,14 +38,13 @@ footer {
 @media (max-width: 795px) {
   footer {
     .footerContent {
-      padding: 75px 25px;
+      padding: 50px $pOa;
     }
   }
 }
 
 @media (max-width: 390px) {
   footer {
-    padding: 10px;
     .footerContent {
       @include dFjCaCfC;
 
