@@ -4,13 +4,32 @@ import { inject, Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class Hm {
+  // Fenster mit Elementen
   hamburgerMenu = signal(false);
+  // Icon Zeichen
   crossIcon = signal(false);
   widthInner: number = 0;
+  // hm Icon
   widthInnerActive = signal(false);
 
   constructor() {
     this.currentWidthInner();
+  }
+
+  currentWidthInner(): void {
+    setInterval(() => {
+      this.widthInner = window.innerWidth;
+
+      if (this.widthInner < 795) {
+        this.widthInnerActive.set(true);
+      }
+
+      if (this.widthInner > 795) {
+        this.widthInnerActive.set(false);
+        this.hamburgerMenu.set(false);
+        this.crossIcon.set(false);
+      }
+    }, 0.0001);
   }
 
   hamburgerMenuActive(change: boolean): void {
@@ -25,22 +44,5 @@ export class Hm {
       this.widthInnerActive.set(true);
       this.crossIcon.set(false);
     }
-  }
-
-  currentWidthInner(): void {
-    setInterval(() => {
-      this.widthInner = window.innerWidth;
-      console.log(this.widthInner);
-
-      if (this.widthInner < 795) {
-        this.widthInnerActive.set(true);
-      }
-
-      if (this.widthInner > 795) {
-        this.widthInnerActive.set(false);
-        this.hamburgerMenu.set(false);
-        this.crossIcon.set(false);
-      }
-    }, 0.0001);
   }
 }
