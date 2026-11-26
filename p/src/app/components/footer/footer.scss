@@ -34,3 +34,25 @@ footer {
     }
   }
 }
+
+@media (max-width: 390px) {
+  footer {
+    padding: 50px;
+    .footerContent {
+      @include dFjCaCfC;
+
+      gap: 20px;
+      .footerContentLeft {
+        @include dFjCaC;
+      }
+      .footerContentMiddle {
+        @include dFjCaC;
+      }
+      .footerContentRight {
+        @include dFjCaCfC;
+        color: $white;
+        gap: 20px;
+      }
+    }
+  }
+}

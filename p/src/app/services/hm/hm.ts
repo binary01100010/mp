@@ -11,6 +11,8 @@ export class Hm {
   widthInner: number = 0;
   // hm Icon
   widthInnerActive = signal(false);
+  // Legal Notice footer
+  legalNotice = signal(false);
 
   constructor() {
     this.currentWidthInner();
@@ -28,6 +30,13 @@ export class Hm {
         this.widthInnerActive.set(false);
         this.hamburgerMenu.set(false);
         this.crossIcon.set(false);
+      }
+
+      if (this.widthInner < 390) {
+        this.legalNotice.set(true);
+      }
+      if (this.widthInner > 390) {
+        this.legalNotice.set(false);
       }
     }, 0.0001);
   }
