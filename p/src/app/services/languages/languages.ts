@@ -10,6 +10,25 @@ export class Languages {
   languageStatus = signal<'en' | 'de'>('en');
   languageDE = signal(true);
   languageEN = signal(false);
+  memoryLanguage = 'memoryLanguage';
+
+  constructor() {
+    this.getLanguage();
+  }
+
+  getLanguage() {
+    let lsMemoryLanguage: string | null = '';
+    if (localStorage.getItem(this.memoryLanguage) === null || undefined) {
+      return;
+    } else if (this.memoryLanguage) {
+      lsMemoryLanguage = localStorage.getItem(this.memoryLanguage);
+      if (lsMemoryLanguage === 'en') {
+        this.changeLanguage('en');
+      } else if (lsMemoryLanguage === 'de') {
+        this.changeLanguage('de');
+      }
+    }
+  }
 
   changeLanguage(chooseLanguage: 'de' | 'en'): void {
     if (chooseLanguage === 'de') {
@@ -17,6 +36,7 @@ export class Languages {
       this.languageEN.set(false);
       this.languageStatus.set('de');
       this.translate.use(chooseLanguage);
+      localStorage.setItem(this.memoryLanguage, this.languageStatus());
     }
 
     if (chooseLanguage === 'en') {
@@ -24,6 +44,7 @@ export class Languages {
       this.languageEN.set(true);
       this.languageStatus.set('en');
       this.translate.use(chooseLanguage);
+      localStorage.setItem(this.memoryLanguage, this.languageStatus());
     }
 
     console.log(chooseLanguage);
